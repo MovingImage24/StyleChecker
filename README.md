@@ -1,29 +1,45 @@
-# README #
+# PHP Code Style Checker
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This library provides a single policy on PHP code styles, as well as a utility to check your 
+project/library against this code style policy without modifying your 
 
-### What is this repository for? ###
+### Installation
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Make sure that in your composer.json you have the private packagist set up:
 
-### How do I get set up? ###
+```
+{
+[...]
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://packagist.mi24.tv/"
+    }
+  ],
+  "config": {
+    "secure-http": false
+  },
+[...]
+}
+```
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Now, install it as a development dependency:
 
-### Contribution guidelines ###
+```
+$ composer require --dev movingimage/style-checker
+```
 
-* Writing tests
-* Code review
-* Other guidelines
+### Usage
 
-### Who do I talk to? ###
+To check your current project's codebase after installing the library:
 
-* Repo owner or admin
-* Other community or team contact
+```
+$ ./vendor/bin/check_code_style.sh
+```
+
+Or you can install it as a pre-commit hook by creating a new file `.git/hooks/pre-commit` with the following contents:
+
+```
+#!/usr/bin/env bash
+./vendor/bin/check_code_style.sh
+```
