@@ -24,5 +24,6 @@
   },
   "require": {
     "friendsofphp/php-cs-fixer": "^2.1"
-  }
+  },
+  "bin": ["bin/check_code_style.sh"]
 }
