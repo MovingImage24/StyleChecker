@@ -1,7 +1,7 @@
 # PHP Code Style Checker
 
 This library provides a single policy on PHP code styles, as well as a utility to check your 
-project/library against this code style policy without modifying your 
+project/library against this code style policy without automatically fixing your code. 
 
 ### Installation
 
