@@ -1,0 +1,26 @@
+{
+  "name": "movingimage/style-checker",
+  "description": "Library that defines a single PHP code style checking configuration.",
+  "type": "library",
+  "license": "Proprietary",
+  "authors": [
+    {
+      "name": "Ruben Knol",
+      "email": "ruben.knol@movingimage.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://packagist.mi24.tv/"
+    }
+  ],
+  "config": {
+    "secure-http": false
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.3"
+  }
+}
